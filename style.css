@@ -16,7 +16,7 @@
     width: 100%;
 }
 
-.more-info {
+.intro__more-info {
     font-family: fantasy, cursive;
 }
 
@@ -38,7 +38,7 @@
     flex-grow: 1;
 }
 
-.task-row-wrapper {
+.section-add__wrapper {
     display: flex;
 }
 
@@ -74,7 +74,6 @@ button {
 /* Heading */
 h1,
 h3,
-
 label[for='new-task'] {
     color: #333;
     font-weight: 700;
