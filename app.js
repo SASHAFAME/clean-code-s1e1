@@ -10,8 +10,8 @@
 
 var taskInput=document.getElementById("new-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+var incompleteTaskHolder=document.querySelector(".incomplete-tasks");//ul of #incompleteTasks
+var completedTasksHolder=document.querySelector(".completed-tasks");//completed-tasks
 
 
 //New task list item
@@ -20,7 +20,7 @@ var createNewTaskElement=function(taskString){
     var listItem=document.createElement("li");
 
     //input (checkbox)
-    var checkBox=document.createElement("input");//checkbox
+    var checkBox=document.createElement("input");//checkbx
     //label
     var label=document.createElement("label");//label
     //input (text)
@@ -43,11 +43,11 @@ var createNewTaskElement=function(taskString){
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="button edit";
 
-
     deleteButton.className="button delete";
     deleteButtonImg.src='./remove.svg';
     deleteButton.appendChild(deleteButtonImg);
 
+    listItem.className = 'todo-item';
 
     //and appending.
     listItem.appendChild(checkBox);
@@ -87,10 +87,10 @@ var editTask=function(){
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".edit");
     var containsClass=listItem.classList.contains("edit-mode");
-    //If class of the parent is .edit-mode
+    //If class of the parent is .editmode
     if(containsClass){
 
-        //switch to .edit-mode
+        //switch to .editmode
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
@@ -99,7 +99,7 @@ var editTask=function(){
         editBtn.innerText="Save";
     }
 
-    //toggle .edit-mode on the parent.
+    //toggle .editmode on the parent.
     listItem.classList.toggle("edit-mode");
 };
 
