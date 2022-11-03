@@ -50,11 +50,13 @@ ul {
   padding: 0px;
 }
 
-.todo-item, h3 {
+.todo-item,
+h3 {
   list-style: none;
 }
 
-input, .button{
+input,
+.button {
   outline: none;
 }
 
@@ -139,7 +141,7 @@ label[for="new-task"] {
   width: 226px;
 }
 
-.todo-item >    input[type="text"] {
+.todo-item > input[type="text"] {
   width: 226px;
 }
 
